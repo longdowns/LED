@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "灯光阵列控制",
+  "usingComponents": {
+    "color-picker": "/components/color-picker/color-picker",
+    "wux-slider": "/components/slider/index",
+    "wux-button": "/components/button/index"
+    }
+}

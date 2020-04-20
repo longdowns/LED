@@ -1,0 +1,19 @@
+<view>
+  <swiper vertical="{{false}}"  indicator-dots="true" autoplay="true" interval="5000" circular="true">
+    <swiper-item>
+      <image src="/images/post/timg.jpg" />
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/post/timg2.png" />
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/post/timg3.jpg"/>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="index">
+  <view class="index-hd">
+    <image class="index-logo" src="/images/post/ledlogo.jpg"></image>
+    <view class="index-desc">运用微信小程序和物联网技术对灯光阵列系统的控制，整个系统由服务器，微信小程序，zigbee网络，灯光阵列四部分组成。小程序端设计有用户登录界面，主界面和几个对灯阵不同参数控制的副界面。 </view>
+  </view>
+</view>
