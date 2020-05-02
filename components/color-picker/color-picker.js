@@ -32,11 +32,7 @@ Component({
   },
   lifetimes: {
     attached() {
-      this.setData({
-        hueData: this.data.colorData.hueData,
-        pickerData: this.data.colorData.pickerData,
-        barY: this.data.colorData.barY
-      })
+      
     },
     ready() {
       const _this = this

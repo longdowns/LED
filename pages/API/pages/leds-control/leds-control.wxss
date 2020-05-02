@@ -13,6 +13,7 @@ movable-view {
   width: 100rpx;
   background:#bdbcbce0;
   color: #fff; 
+  border-radius: 50%;
   /*box-shadow:0px 0px 5px 2px rgb(12, 201, 250);*/
 }
 movable-area {
@@ -20,6 +21,38 @@ movable-area {
   width: 100%;
   background-color: rgb(241, 241, 241);
   overflow: hidden;
+}
+.mova1 {
+  height:520rpx;
+  width: 100%;
+}
+.mova2 {
+  height:640rpx;
+  width: 100%;
+}
+.mov3 {
+  height:95rpx;
+  width:95rpx;
+}
+
+.mov4 {
+  height:85rpx;
+  width:85rpx;
+}
+
+.mov5 {
+  height:85rpx;
+  width:85rpx;
+}
+
+.mov6 {
+  height:95rpx;
+  width:95rpx;
+}
+
+.mov7 {
+  height:95rpx;
+  width:95rpx;
 }
 
 .c {
