@@ -30,6 +30,10 @@ movable-area {
   height:640rpx;
   width: 100%;
 }
+.mova3 {
+  height:680rpx;
+  width: 100%;
+}
 .mov3 {
   height:95rpx;
   width:95rpx;
@@ -46,13 +50,17 @@ movable-area {
 }
 
 .mov6 {
-  height:95rpx;
-  width:95rpx;
+  height:75rpx;
+  width:75rpx;
 }
 
 .mov7 {
-  height:95rpx;
-  width:95rpx;
+  height:65rpx;
+  width:65rpx;
+}
+.mov8 {
+  height:55rpx;
+  width:55rpx;
 }
 
 .c {
