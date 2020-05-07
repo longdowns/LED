@@ -15,7 +15,10 @@ Page({
     visible1: false,
     visible2: false,
     num:[1,2,3,4,5,6,7,8,9,10,11],
-    gg:'1',
+    currentId:'1',
+    showcolorbar: false,
+    showpickdialog:false,
+    colorpick:['#e54d42','#f37b1d','#fbbd08','#8dc63f','#39b54a','#1cbbb4','#0081ff','#6739b6','#9c26b0','#e03997','#a5673f','#ff40e3','#40ff55','#fffe03','#8799a3']
    },
   
   onLoad() {
@@ -60,8 +63,14 @@ Page({
     })
   },
 
+  tapOneDialogButton(e) {
+    this.setData({
+        showcolorbar: true,
+        currentId : e.target.dataset.id
+    })
+},
+
   bindPickerChange(e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       pnum: e.detail.value
     })
@@ -90,18 +99,27 @@ Page({
     });
   },
 
-  bindchange: function (e) {
-    this.data.gg = e.target.dataset.id
+  pickchange(e){
+    var index = e.target.dataset.id
+    this.setData({
+      [`colorData[${this.data.currentId-1}].pickerData.hex`]: this.data.colorpick[index],
+      showcolorbar: false
+    })
+  },
+
+
+  pickshow: function (e) {
     timer: setTimeout(() => {
       this.setData({
-        gg: this.data.gg,
-        [`showColorPicker[${this.data.gg}]`]:true
+        [`showColorPicker[${this.data.currentId}]`]:true,
+        showcolorbar: false,
+        showpickdialog:true
       });
     }, 50)
     wx.request({
       url: 'http://120.77.86.240:3002/currentId',
       data: {
-        currentId:this.data.gg,
+        currentId:this.data.currentId,
       },
       method: 'GET',
       header: {
@@ -140,13 +158,13 @@ Page({
     var opa=e.detail.value
     
     this.setData({
-      [`colorData[${this.data.gg-1}].imgOpacity`]: opa/100
+      [`colorData[${this.data.currentId-1}].imgOpacity`]: opa/100
     })
-    var opa1=[`colorData[${this.data.gg-1}].imgOpacity`]
+    var opa1=[`colorData[${this.data.currentId-1}].imgOpacity`]
     wx.request({
       url: 'http://120.77.86.240:3002/UPDATEopacity',
       data: {
-        id:this.data.gg,
+        id:this.data.currentId,
         opacity:opa.toString()
       },
       method: 'GET',

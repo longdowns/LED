@@ -24,63 +24,81 @@
 <view class="color-picker-demo">
     <view class="c">
         <movable-area wx-if="{{pnum==0}}"bindtap="judgeColorPicker">
-        <movable-view class="target" wx:for="{{1}}" data-id="{{index+1}}" style="background:{{colorData[1].pickerData.hex}};opacity:{{colorData[index].imgOpacity}};box-shadow:0px 0px 5px 2px rgb({{colorData[1].pickerData.red}}, {{colorData[1].pickerData.green}}, {{colorData[1].pickerData.blue}})" x="{{list[pnum].x[index]}}" y="{{list[pnum].y[index]}}" direction="all" bindchange="getNodeInfo" bindtap="bindchange">
+        <movable-view class="target" wx:for="{{1}}" data-id="{{index+1}}" style="background:{{colorData[index].pickerData.hex}};opacity:{{colorData[index].imgOpacity}};box-shadow:0px 0px 5px 2px {{colorData[index].pickerData.hex}}" x="{{list[pnum].x[index]}}" y="{{list[pnum].y[index]}}" direction="all"  bindtap="tapOneDialogButton">
         1</movable-view>
         </movable-area >
 
     <movable-area wx-if="{{pnum==1}}"bindtap="judgeColorPicker">
-        <movable-view class="target" wx:for="{{4}}" data-id="{{index+1}}" style="background:{{colorData[index].pickerData.hex}};opacity:{{colorData[index].imgOpacity}};box-shadow:0px 0px 5px 2px rgb({{colorData[index].pickerData.red}}, {{colorData[index].pickerData.green}}, {{colorData[index].pickerData.blue}})" x="{{list[pnum].x[index]}}" y="{{list[pnum].y[index]}}" direction="all" bindchange="getNodeInfo" bindtap="bindchange">
+        <movable-view class="target" wx:for="{{4}}" data-id="{{index+1}}" style="background:{{colorData[index].pickerData.hex}};opacity:{{colorData[index].imgOpacity}};box-shadow:0px 0px 5px 2px {{colorData[index].pickerData.hex}}" x="{{list[pnum].x[index]}}" y="{{list[pnum].y[index]}}" direction="all"  bindtap="tapOneDialogButton">
         {{index+1}}</movable-view>
     </movable-area >
 
     <movable-area wx-if="{{pnum==2}}"bindtap="judgeColorPicker">
-        <movable-view class="target" wx:for="{{9}}" data-id="{{index+1}}" style="background:{{colorData[index].pickerData.hex}};opacity:{{colorData[index].imgOpacity}};box-shadow:0px 0px 5px 2px rgb({{colorData[index].pickerData.red}}, {{colorData[index].pickerData.green}}, {{colorData[index].pickerData.blue}})" x="{{list[pnum].x[index]}}" y="{{list[pnum].y[index]}}" direction="all" bindchange="getNodeInfo" bindtap="bindchange">
+        <movable-view class="target" wx:for="{{9}}" data-id="{{index+1}}" style="background:{{colorData[index].pickerData.hex}};opacity:{{colorData[index].imgOpacity}};box-shadow:0px 0px 5px 2px {{colorData[index].pickerData.hex}}" x="{{list[pnum].x[index]}}" y="{{list[pnum].y[index]}}" direction="all"  bindtap="tapOneDialogButton">
         {{index+1}}</movable-view>
     </movable-area >
 
     <movable-area wx-if="{{pnum==3}}"bindtap="judgeColorPicker">
-        <movable-view class="target mov3" wx:for="{{16}}" data-id="{{index+1}}" style="background:{{colorData[index].pickerData.hex}};opacity:{{colorData[index].imgOpacity}};box-shadow:0px 0px 5px 2px rgb({{colorData[index].pickerData.red}}, {{colorData[index].pickerData.green}}, {{colorData[index].pickerData.blue}})" x="{{list[pnum].x[index]}}" y="{{list[pnum].y[index]}}" direction="all" bindchange="getNodeInfo" bindtap="bindchange">
+        <movable-view class="target mov3" wx:for="{{16}}" data-id="{{index+1}}" style="background:{{colorData[index].pickerData.hex}};opacity:{{colorData[index].imgOpacity}};box-shadow:0px 0px 5px 2px {{colorData[index].pickerData.hex}}" x="{{list[pnum].x[index]}}" y="{{list[pnum].y[index]}}" direction="all"  bindtap="tapOneDialogButton">
         {{index+1}}</movable-view>
     </movable-area >
 
     <movable-area class="target mova1" wx-if="{{pnum==4}}"bindtap="judgeColorPicker">
-        <movable-view class="target mov4" wx:for="{{25}}" data-id="{{index+1}}" style="background:{{colorData[index].pickerData.hex}};opacity:{{colorData[index].imgOpacity}};box-shadow:0px 0px 5px 2px rgb({{colorData[index].pickerData.red}}, {{colorData[index].pickerData.green}}, {{colorData[index].pickerData.blue}})" x="{{list[pnum].x[index]}}" y="{{list[pnum].y[index]}}" direction="all" bindchange="getNodeInfo" bindtap="bindchange">
+        <movable-view class="target mov4" wx:for="{{25}}" data-id="{{index+1}}" style="background:{{colorData[index].pickerData.hex}};opacity:{{colorData[index].imgOpacity}};box-shadow:0px 0px 5px 2px {{colorData[index].pickerData.hex}}" x="{{list[pnum].x[index]}}" y="{{list[pnum].y[index]}}" direction="all"  bindtap="tapOneDialogButton">
         {{index+1}}</movable-view>
     </movable-area >
         
     <movable-area class="target mova2" wx-if="{{pnum==5}}"bindtap="judgeColorPicker">
-        <movable-view class="target mov5" wx:for="{{36}}" data-id="{{index+1}}" style="background:{{colorData[index].pickerData.hex}};opacity:{{colorData[index].imgOpacity}};box-shadow:0px 0px 5px 2px rgb({{colorData[index].pickerData.red}}, {{colorData[index].pickerData.green}}, {{colorData[index].pickerData.blue}})" x="{{list[pnum].x[index]}}" y="{{list[pnum].y[index]}}" direction="all" bindchange="getNodeInfo" bindtap="bindchange">
+        <movable-view class="target mov5" wx:for="{{36}}" data-id="{{index+1}}" style="background:{{colorData[index].pickerData.hex}};opacity:{{colorData[index].imgOpacity}};box-shadow:0px 0px 5px 2px {{colorData[index].pickerData.hex}}" x="{{list[pnum].x[index]}}" y="{{list[pnum].y[index]}}" direction="all"  bindtap="tapOneDialogButton">
         {{index+1}}</movable-view>
     </movable-area >
 
     <movable-area class="target mova3" wx-if="{{pnum==6}}"bindtap="judgeColorPicker">
-        <movable-view class="target mov6" wx:for="{{49}}" data-id="{{index+1}}" style="background:{{colorData[index].pickerData.hex}};opacity:{{colorData[index].imgOpacity}};box-shadow:0px 0px 5px 2px rgb({{colorData[index].pickerData.red}}, {{colorData[index].pickerData.green}}, {{colorData[index].pickerData.blue}})" x="{{list[pnum].x[index]}}" y="{{list[pnum].y[index]}}" direction="all" bindchange="getNodeInfo" bindtap="bindchange">
+        <movable-view class="target mov6" wx:for="{{49}}" data-id="{{index+1}}" style="background:{{colorData[index].pickerData.hex}};opacity:{{colorData[index].imgOpacity}};box-shadow:0px 0px 5px 2px {{colorData[index].pickerData.hex}}" x="{{list[pnum].x[index]}}" y="{{list[pnum].y[index]}}" direction="all"  bindtap="tapOneDialogButton">
         {{index+1}}</movable-view>
     </movable-area >
 
     <movable-area class="target mova3" wx-if="{{pnum==7}}"bindtap="judgeColorPicker">
-        <movable-view class="target mov6" wx:for="{{64}}" data-id="{{index+1}}" style="background:{{colorData[index].pickerData.hex}};opacity:{{colorData[index].imgOpacity}};box-shadow:0px 0px 3px 1px rgb({{colorData[index].pickerData.red}}, {{colorData[index].pickerData.green}}, {{colorData[index].pickerData.blue}})" x="{{list[pnum].x[index]}}" y="{{list[pnum].y[index]}}" direction="all" bindchange="getNodeInfo" bindtap="bindchange">
+        <movable-view class="target mov6" wx:for="{{64}}" data-id="{{index+1}}" style="background:{{colorData[index].pickerData.hex}};opacity:{{colorData[index].imgOpacity}};box-shadow:0px 0px 5px 2px {{colorData[index].pickerData.hex}}" x="{{list[pnum].x[index]}}" y="{{list[pnum].y[index]}}" direction="all"  bindtap="tapOneDialogButton">
         {{index+1}}</movable-view>
     </movable-area >
 
-     <movable-area class="target mova3" wx-if="{{pnum==8}}"bindtap="judgeColorPicker">
-        <movable-view class="target mov7" wx:for="{{81}}" data-id="{{index+1}}" style="background:{{colorData[index].pickerData.hex}};opacity:{{colorData[index].imgOpacity}};box-shadow:0px 0px 3px 1px rgb({{colorData[index].pickerData.red}}, {{colorData[index].pickerData.green}}, {{colorData[index].pickerData.blue}})" x="{{list[pnum].x[index]}}" y="{{list[pnum].y[index]}}" direction="all" bindchange="getNodeInfo" bindtap="bindchange">
+    <movable-area class="target mova3" wx-if="{{pnum==8}}"bindtap="judgeColorPicker">
+        <movable-view class="target mov7" wx:for="{{81}}" data-id="{{index+1}}" style="background:{{colorData[index].pickerData.hex}};opacity:{{colorData[index].imgOpacity}};box-shadow:0px 0px 5px 2px {{colorData[index].pickerData.hex}}" x="{{list[pnum].x[index]}}" y="{{list[pnum].y[index]}}" direction="all"  bindtap="tapOneDialogButton">
         {{index+1}}</movable-view>
     </movable-area >
+
+
 </view>
+
+    <mp-dialog  show="{{showcolorbar}}" >
+        <view>颜色板</view>
+          <view class="pickarea" >
+          <view class="pickview" wx:for="{{15}}" data-id="{{index}}"  bindtap="pickchange" style="background:{{colorpick[index]}};box-shadow:0px 0px 3px 1px {{colorpick[index]}}">
+          </view>
+          <view class="pickview" data-id="{15}}" bindtap="pickshow" style="background:linear-gradient(to right, red, yellow, blue);">
+          </view>
+        </view>
+    </mp-dialog>
+
+    <mp-dialog  show="{{showpickdialog}}" >
+    <view class="wrapper wrapper-absolute">
+        <view wx:for="{{81}}" class="pickerview" wx-if="{{currentId==index+1&&showColorPicker[index+1]}}">
+          <color-picker data-id="{{index+1}}" class="color-picker" colorData="{{colorData[index]}}" rpxRatio="{{rpxRatio}}"
+          bindchangecolor="onChangeColor" bindgetRED="onChangeColor" bindgetGREEN="onChangeColor"               bindgetBLUE="onChangeColor" bindgetHEX="onChangeColor"></color-picker>
+    </view>
+    </view>
+    </mp-dialog>    
+
    
+
    <view class="wrapper wrapper-absolute">
-        <view wx:for="{{81}}" class="flex" data-id="{{index+1}}" bindtap="toggleColorPicker" wx-if="{{gg==index+1}}">
+        <view wx:for="{{81}}" class="flex" data-id="{{index+1}}" bindtap="toggleColorPicker" wx-if="{{currentId==index+1}}">
             <view calss="current">
                 <text>灯{{index+1}}：</text>
                 <text class="hex">{{colorData[index].pickerData.hex}}</text>
             </view>
             <view class="color" style="background:{{colorData[index].pickerData.hex}}"></view>
-        </view>
-
-        <view wx:for="{{81}}" class="color-picker-wrapper" wx-if="{{gg==index+1&&showColorPicker[index+1]}}">
-            <color-picker data-id="{{index+1}}" class="color-picker" colorData="{{colorData[index]}}" rpxRatio="{{rpxRatio}}"
-                bindchangecolor="onChangeColor" bindgetRED="onChangeColor" bindgetGREEN="onChangeColor"               bindgetBLUE="onChangeColor" bindgetHEX="onChangeColor"></color-picker>
         </view>
 
     </view>
